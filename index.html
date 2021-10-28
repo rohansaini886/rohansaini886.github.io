@@ -58,17 +58,16 @@
     <!-- Add this script for successful 
         implementation of typed.js  -->
     <script>
-      if (typed) {
-        let typed_strings = typed.getAttribute('data-typed-items')
-        typed_strings = typed_strings.split(',')
-        new Typed('.typed', {
-          strings: typed_strings,
-          loop: true,
-          typeSpeed: 25,
-          backSpeed: 25,
-          backDelay: 2000
+      if ($(".typed").length == 1) {
+        var typed_strings = $(".data-typed-items").text();
+        var typed = new Typed(".typed", {
+            strings: typed_strings.split(", "),
+            typeSpeed: 50,
+            loop: true,
+            backDelay: 900,
+            backSpeed: 30,
         });
-      }
+    }
     </script>
 
       <nav id="navbar" class="navbar">
