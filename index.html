@@ -44,8 +44,7 @@
       <h1>Rohan Saini</h1>
       <!-- Uncomment below if you prefer to use an image logo-->
       <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-      <h2>I'm a passionate<span class="text-slider-items" data-typed-items = "Learner, Python-developer, Front-End Developer, Data-Science Enthusiatic.">
-            </span>
+      <h2>I'm a passionate <span class="typed" data-typed-items="Learner, Front-End Developer, Data-Science Enthusiastic"></span>
            </h2>
       <script src=
         "./js/typed.min.js">
@@ -59,19 +58,17 @@
     <!-- Add this script for successful 
         implementation of typed.js  -->
     <script>
-        if ($(".text-slider").length == 1) {
-              
-            var typed_strings = 
-                $(".text-slider-items").text();
-  
-            var typed = new Typed(".text-slider", {
-                strings: typed_strings.split(", "),
-                typeSpeed: 50,
-                loop: true,
-                backDelay: 900,
-                backSpeed: 30,
-            });
-        }
+      if (typed) {
+        let typed_strings = typed.getAttribute('data-typed-items')
+        typed_strings = typed_strings.split(',')
+        new Typed('.typed', {
+          strings: typed_strings,
+          loop: true,
+          typeSpeed: 25,
+          backSpeed: 25,
+          backDelay: 2000
+        });
+      }
     </script>
 
       <nav id="navbar" class="navbar">
