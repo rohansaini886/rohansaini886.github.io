@@ -49,6 +49,32 @@
                 geeks, A place to pratice code
             </span>
             <strong class="text-slider"></strong></h2>
+      <script src=
+        "./js/typed.min.js">
+    </script>
+      
+    <!-- Add jquery cdn -->
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+  
+    <!-- Add this script for successful 
+        implementation of typed.js  -->
+    <script>
+        if ($(".text-slider").length == 1) {
+              
+            var typed_strings = 
+                $(".text-slider-items").text();
+  
+            var typed = new Typed(".text-slider", {
+                strings: typed_strings.split(", "),
+                typeSpeed: 50,
+                loop: true,
+                backDelay: 900,
+                backSpeed: 30,
+            });
+        }
+    </script>
 
       <nav id="navbar" class="navbar">
         <ul>
